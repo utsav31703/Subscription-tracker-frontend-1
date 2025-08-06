@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubDub - Subscription Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Auth Container -->
+    <div id="auth-container" class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>📱 SubDub</h1>
+                <p>Your Subscription Management Hub</p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <h2>Welcome Back</h2>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="login-email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                </div>
+                <button type="submit">Sign In</button>
+                <p class="auth-switch">Don't have an account? <a href="#" id="show-register">Sign up</a></p>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form hidden">
+                <h2>Create Account</h2>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="register-name" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="register-email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="register-password" placeholder="Password" required>
+                </div>
+                <button type="submit">Sign Up</button>
+                <p class="auth-switch">Already have an account? <a href="#" id="show-login">Sign in</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main App Container -->
+    <div id="app-container" class="app-container hidden">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>📱 SubDub</h1>
+            </div>
+            <div class="nav-actions">
+                <span id="user-name">Welcome, User</span>
+                <button id="logout-btn" class="btn-secondary">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </nav>
+
+        <!-- Dashboard -->
+        <div class="dashboard">
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="total-subscriptions">0</h3>
+                        <p>Total Subscriptions</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="monthly-cost">$0</h3>
+                        <p>Monthly Cost</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="upcoming-renewals">0</h3>
+                        <p>Upcoming Renewals</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="yearly-cost">$0</h3>
+                        <p>Yearly Cost</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Bar -->
+            <div class="action-bar">
+                <h2>Your Subscriptions</h2>
+                <button id="add-subscription-btn" class="btn-primary">
+                    <i class="fas fa-plus"></i> Add Subscription
+                </button>
+            </div>
+
+            <!-- Subscriptions Grid -->
+            <div id="subscriptions-grid" class="subscriptions-grid">
+                <!-- Subscription cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Subscription Modal -->
+    <div id="subscription-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Add New Subscription</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="subscription-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Service Name</label>
+                        <input type="text" id="service-name" placeholder="Netflix, Spotify, etc." required>
+                    </div>
+                    <div class="input-group">
+                        <label>Plan Name</label>
+                        <input type="text" id="plan-name" placeholder="Premium, Basic, Pro" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Price</label>
+                        <input type="number" id="price" step="0.01" placeholder="15.99" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Currency</label>
+                        <select id="currency" required>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="INR">INR</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Frequency</label>
+                        <select id="frequency" required>
+                            <option value="monthly">Monthly</option>
+                            <option value="yearly">Yearly</option>
+                            <option value="weekly">Weekly</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Category</label>
+                        <select id="category" required>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="productivity">Productivity</option>
+                            <option value="education">Education</option>
+                            <option value="fitness">Fitness</option>
+                            <option value="music">Music</option>
+                            <option value="cloud">Cloud Storage</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Payment Method</label>
+                    <input type="text" id="payment-method" placeholder="Credit Card ending in 1234">
+                </div>
+                <div class="input-group">
+                    <label>Start Date</label>
+                    <input type="date" id="start-date" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary cancel-btn">Cancel</button>
+                    <button type="submit" class="btn-primary">Save Subscription</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
