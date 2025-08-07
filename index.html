@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>RemindMeLater - Smart Subscription Management</title>
-    <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <style>
         * {
             margin: 0;
@@ -25,17 +23,15 @@
             --medium-gray: #666666;
 
             /* Retro Patterns */
-            --retro-stripes: repeating-linear-gradient(
-                45deg,
-                #000000,
-                #000000 2px,
-                transparent 2px,
-                transparent 8px
-            );
+            --retro-stripes: repeating-linear-gradient(45deg,
+                    #000000,
+                    #000000 2px,
+                    transparent 2px,
+                    transparent 8px);
             --retro-dots: radial-gradient(circle, #000000 1px, transparent 1px);
-            --retro-grid: 
-                linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px),
-                linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px);
+            --retro-grid:
+                linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+                linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
 
             /* Shadows & Effects */
             --retro-shadow: 8px 8px 0px rgba(0, 0, 0, 1);
@@ -235,6 +231,7 @@
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -260,13 +257,14 @@
             display: flex;
             align-items: center;
             background: var(--secondary-color);
-            background-image: 
+            background-image:
                 var(--retro-grid),
                 var(--retro-dots);
             background-size: 30px 30px, 15px 15px;
             position: relative;
             overflow: hidden;
-            padding-top: 80px; /* Account for fixed navbar */
+            padding-top: 80px;
+            /* Account for fixed navbar */
         }
 
         .hero::before {
@@ -276,13 +274,11 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 3px,
-                rgba(0, 0, 0, 0.05) 3px,
-                rgba(0, 0, 0, 0.05) 6px
-            );
+            background: repeating-linear-gradient(0deg,
+                    transparent,
+                    transparent 3px,
+                    rgba(0, 0, 0, 0.05) 3px,
+                    rgba(0, 0, 0, 0.05) 6px);
             pointer-events: none;
             z-index: 1;
         }
@@ -308,7 +304,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             position: relative;
-            text-shadow: 
+            text-shadow:
                 3px 3px 0px rgba(0, 0, 0, 0.1),
                 6px 6px 0px rgba(0, 0, 0, 0.05);
         }
@@ -391,15 +387,20 @@
         }
 
         @keyframes retro-float {
-            0%, 100% { 
+
+            0%,
+            100% {
                 transform: translateY(0px) rotate(0deg);
             }
+
             25% {
                 transform: translateY(-5px) rotate(0.5deg);
             }
-            50% { 
+
+            50% {
                 transform: translateY(-8px) rotate(0deg);
             }
+
             75% {
                 transform: translateY(-3px) rotate(-0.5deg);
             }
@@ -449,7 +450,7 @@
             left: 4px;
             right: -4px;
             bottom: -4px;
-           
+
             z-index: -1;
         }
 
@@ -597,7 +598,7 @@
             left: 5px;
             right: -5px;
             bottom: -5px;
-           
+
             border: 3px solid var(--primary-color);
             z-index: -1;
         }
@@ -895,6 +896,7 @@
                 flex: 1 1 auto;
                 box-sizing: border-box;
             }
+
             .auth-buttons {
                 gap: 0.6rem;
             }
@@ -904,38 +906,47 @@
             .nav-menu {
                 display: none;
             }
+
             .mobile-menu-btn {
                 display: block;
             }
+
             .hero {
                 padding-top: 100px;
             }
+
             .hero-container {
                 grid-template-columns: 1fr;
                 text-align: center;
                 gap: 2rem;
                 padding: 1rem;
             }
+
             .hero-visual {
                 order: -1;
             }
+
             .dashboard-mockup {
                 max-width: 350px;
             }
+
             .hero-buttons {
                 justify-content: center;
                 flex-direction: column;
                 align-items: center;
                 gap: 1rem;
             }
+
             .btn-hero {
                 min-width: 250px;
             }
+
             .features-grid,
             .testimonials-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
+
             .feature-card,
             .testimonial-card {
                 padding: 2rem;
@@ -953,6 +964,7 @@
                 gap: 0.5rem;
                 width: auto;
             }
+
             .auth-buttons .btn {
                 padding: 0.65rem 1rem;
                 min-width: unset;
@@ -975,52 +987,64 @@
             .nav-container {
                 padding: 1rem;
             }
+
             .logo {
                 font-size: 1.3rem;
                 letter-spacing: 0.5px;
             }
+
             .hero {
                 min-height: 90vh;
                 padding-top: 80px;
             }
+
             .hero-container {
                 padding: 1rem 0.5rem;
                 gap: 1.5rem;
             }
+
             .dashboard-mockup {
                 max-width: 280px;
                 padding: 1.5rem;
             }
+
             .hero-buttons {
                 gap: 0.8rem;
             }
+
             .btn-hero {
                 min-width: 200px;
                 padding: 1rem 1.5rem;
             }
+
             .features,
             .testimonials,
             .cta {
                 padding-left: 1rem;
                 padding-right: 1rem;
             }
+
             .feature-card,
             .testimonial-card {
                 padding: 1.5rem;
             }
+
             .feature-icon {
                 width: 60px;
                 height: 60px;
                 font-size: 1.5rem;
             }
+
             .author-avatar {
                 width: 50px;
                 height: 50px;
                 font-size: 1.2rem;
             }
+
             .mobile-menu {
                 padding: 1.5rem 1rem;
             }
+
             .section-header {
                 margin-bottom: 2.5rem;
             }
@@ -1028,6 +1052,7 @@
 
         /* Large tablet and small laptop fix */
         @media (max-width: 1024px) {
+
             .features-grid,
             .testimonials-grid {
                 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1039,14 +1064,17 @@
             .hero-container {
                 padding: 0.5rem;
             }
+
             .dashboard-mockup {
                 max-width: 250px;
                 padding: 1rem;
             }
+
             .btn-hero {
                 min-width: 180px;
                 font-size: 0.9rem;
             }
+
             .feature-card,
             .testimonial-card {
                 padding: 1rem;
@@ -1059,9 +1087,11 @@
                 min-height: 100vh;
                 padding-top: 60px;
             }
+
             .hero-container {
                 padding: 1rem;
             }
+
             .section-header {
                 margin-bottom: 2rem;
             }
@@ -1069,7 +1099,8 @@
 
         /* High DPI Displays */
         @media (-webkit-min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi) {
+        (min-resolution: 192dpi) {
+
             .retro-shadow,
             .retro-shadow-sm,
             .retro-shadow-lg {
@@ -1102,18 +1133,17 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 2px,
-                rgba(0, 0, 0, 0.05) 2px,
-                rgba(0, 0, 0, 0.05) 4px
-            );
+            background: repeating-linear-gradient(0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 0, 0, 0.05) 2px,
+                    rgba(0, 0, 0, 0.05) 4px);
             pointer-events: none;
         }
 
         /* Print Styles */
         @media print {
+
             .navbar,
             .mobile-menu,
             .mobile-menu-btn,
@@ -1137,6 +1167,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -1174,9 +1205,10 @@
         <div class="hero-container">
             <div class="hero-content fade-in">
                 <h1>Take Control of Your Subscriptions</h1>
-                <p>Never miss a payment or lose track of your subscriptions again. RemindMeLater helps you manage, monitor, and optimize all your recurring expenses in one sleek, retro-styled dashboard.</p>
+                <p>Never miss a payment or lose track of your subscriptions again. RemindMeLater helps you manage,
+                    monitor, and optimize all your recurring expenses in one sleek, retro-styled dashboard.</p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn btn-hero-primary" id="heroSignupBtn">
+                    <a href="auth.html" class="btn btn-hero-primary" id="heroSignupBtn">
                         <i class="fas fa-rocket"></i> Start Free Today
                     </a>
                     <a href="#features" class="btn btn-hero-outline">
@@ -1216,7 +1248,9 @@
         <div class="features-container">
             <div class="section-header fade-in">
                 <h2>Smart Subscription Management</h2>
-                <p>RemindMeLater is your all-in-one subscription tracking platform designed to help you save money, stay organized, and never miss important renewal dates. Built with a retro aesthetic and modern functionality.</p>
+                <p>RemindMeLater is your all-in-one subscription tracking platform designed to help you save money, stay
+                    organized, and never miss important renewal dates. Built with a retro aesthetic and modern
+                    functionality.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card fade-in">
@@ -1224,42 +1258,48 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Expense Tracking</h3>
-                    <p>Get detailed insights into your subscription spending with beautiful charts and analytics. Track monthly, yearly costs and identify potential savings opportunities.</p>
+                    <p>Get detailed insights into your subscription spending with beautiful charts and analytics. Track
+                        monthly, yearly costs and identify potential savings opportunities.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-bell"></i>
                     </div>
                     <h3>Smart Reminders</h3>
-                    <p>Never get surprised by renewal charges again. Receive timely notifications before your subscriptions renew, giving you time to decide whether to continue or cancel.</p>
+                    <p>Never get surprised by renewal charges again. Receive timely notifications before your
+                        subscriptions renew, giving you time to decide whether to continue or cancel.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <h3>Mobile Optimized</h3>
-                    <p>Access your subscription dashboard anywhere, anytime. Our responsive design works perfectly on desktop, tablet, and mobile devices with retro-inspired styling.</p>
+                    <p>Access your subscription dashboard anywhere, anytime. Our responsive design works perfectly on
+                        desktop, tablet, and mobile devices with retro-inspired styling.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Secure & Private</h3>
-                    <p>Your financial data is protected with bank-level security. We never store your payment information, only track subscription details you provide manually.</p>
+                    <p>Your financial data is protected with bank-level security. We never store your payment
+                        information, only track subscription details you provide manually.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-tags"></i>
                     </div>
                     <h3>Smart Categories</h3>
-                    <p>Organize subscriptions by type - entertainment, productivity, fitness, and more. Get insights into spending patterns by category with vintage-style visualizations.</p>
+                    <p>Organize subscriptions by type - entertainment, productivity, fitness, and more. Get insights
+                        into spending patterns by category with vintage-style visualizations.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-sync-alt"></i>
                     </div>
                     <h3>Multi-Currency Support</h3>
-                    <p>Track subscriptions in multiple currencies with automatic conversion. Perfect for global services and international users who want unified tracking.</p>
+                    <p>Track subscriptions in multiple currencies with automatic conversion. Perfect for global services
+                        and international users who want unified tracking.</p>
                 </div>
             </div>
         </div>
@@ -1270,14 +1310,18 @@
         <div class="testimonials-container">
             <div class="section-header fade-in">
                 <h2>What Our Users Say</h2>
-                <p>Join thousands of satisfied users who have taken control of their subscription spending with RemindMeLater's retro-modern approach.</p>
+                <p>Join thousands of satisfied users who have taken control of their subscription spending with
+                    RemindMeLater's retro-modern approach.</p>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card fade-in">
                     <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"RemindMeLater's retro design caught my attention, but it's the functionality that kept me. Discovered I was paying for 3 streaming services I wasn't using! Saved me $45/month and the interface is absolutely beautiful."</p>
+                    <p class="testimonial-text">"RemindMeLater's retro design caught my attention, but it's the
+                        functionality that kept me. Discovered I was paying for 3 streaming services I wasn't using!
+                        Saved me $45/month and the interface is absolutely beautiful."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">SM</div>
                         <div class="author-info">
@@ -1288,9 +1332,12 @@
                 </div>
                 <div class="testimonial-card fade-in">
                     <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"The renewal reminders are a game-changer! I never get hit with unexpected charges anymore. The black and white aesthetic with retro touches makes managing finances actually enjoyable. Love the dashboard design!"</p>
+                    <p class="testimonial-text">"The renewal reminders are a game-changer! I never get hit with
+                        unexpected charges anymore. The black and white aesthetic with retro touches makes managing
+                        finances actually enjoyable. Love the dashboard design!"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">DK</div>
                         <div class="author-info">
@@ -1301,9 +1348,12 @@
                 </div>
                 <div class="testimonial-card fade-in">
                     <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Clean, intuitive design with a vintage twist and powerful features. RemindMeLater made tracking my business subscriptions effortless. The retro styling is unique and professional. Highly recommended for anyone with multiple subscriptions."</p>
+                    <p class="testimonial-text">"Clean, intuitive design with a vintage twist and powerful features.
+                        RemindMeLater made tracking my business subscriptions effortless. The retro styling is unique
+                        and professional. Highly recommended for anyone with multiple subscriptions."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">AR</div>
                         <div class="author-info">
@@ -1320,8 +1370,9 @@
     <section class="cta">
         <div class="cta-container fade-in">
             <h2>Ready to Take Control?</h2>
-            <p>Join thousands of users who are already saving money and staying organized with RemindMeLater's retro-inspired subscription management platform. Start your free account today.</p>
-            <a href="#" class="btn btn-hero-primary" id="ctaSignupBtn">
+            <p>Join thousands of users who are already saving money and staying organized with RemindMeLater's
+                retro-inspired subscription management platform. Start your free account today.</p>
+            <a href="auth.html" class="btn btn-hero-primary" id="ctaSignupBtn">
                 <i class="fas fa-rocket"></i> Get Started Free
             </a>
         </div>
@@ -1389,7 +1440,7 @@
 
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                if(entry.isIntersecting) {
+                if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
@@ -1399,13 +1450,13 @@
 
         // Auth button handlers with simulated loading
         const authButtons = [
-            'loginBtn', 'signupBtn', 'heroSignupBtn', 'ctaSignupBtn', 
+            'loginBtn', 'signupBtn', 'heroSignupBtn', 'ctaSignupBtn',
             'mobileLoginBtn', 'mobileSignupBtn'
         ];
 
         authButtons.forEach(btnId => {
             const btn = document.getElementById(btnId);
-            if(btn) {
+            if (btn) {
                 btn.addEventListener('click', e => {
                     e.preventDefault();
                     const originalText = btn.innerHTML;
@@ -1416,11 +1467,14 @@
                         btn.innerHTML = originalText;
                         btn.style.pointerEvents = 'auto';
 
-                        if (btnId.includes('login')) {
-                            window.location.href ='index.html'
+                        if (btnId === 'ctaSignupBtn') {
+                            window.location.href = 'auth.html';
+                        } else if (btnId.includes('login')) {
+                            window.location.href = 'index.html';
                         } else {
-                            window.location.href ='index.html'
+                            window.location.href = 'index.html';
                         }
+
                     }, 1000);
                 });
             }
@@ -1455,7 +1509,7 @@
         });
 
         const heroSection = document.querySelector('.hero');
-        if(heroSection) {
+        if (heroSection) {
             heroObserver.observe(heroSection);
         }
 
@@ -1466,7 +1520,7 @@
             element.style.borderRight = '3px solid #000';
 
             function type() {
-                if(i < text.length) {
+                if (i < text.length) {
                     element.textContent += text.charAt(i);
                     i++;
                     setTimeout(type, speed);
@@ -1481,7 +1535,7 @@
 
         window.addEventListener('load', () => {
             const heroTitle = document.querySelector('.hero-content h1');
-            if(heroTitle) {
+            if (heroTitle) {
                 const originalText = heroTitle.textContent;
                 setTimeout(() => retroTypeWriter(heroTitle, originalText, 60), 800);
             }
@@ -1489,7 +1543,7 @@
 
         // Dashboard mockup mouse-follow interaction
         const mockup = document.querySelector('.dashboard-mockup');
-        if(mockup){
+        if (mockup) {
             let mouseX = 0;
             let mouseY = 0;
             document.addEventListener('mousemove', e => {
@@ -1548,7 +1602,7 @@
         // Responsive JS: Reset mobile menu on resize
         function handleResize() {
             const width = window.innerWidth;
-            if(width > 768) {
+            if (width > 768) {
                 mobileMenu.classList.remove('active');
                 const icon = mobileMenuBtn.querySelector('i');
                 icon.classList.add('fa-bars');
@@ -1564,13 +1618,13 @@
             touchStartY = e.touches[0].clientY;
         });
         document.addEventListener('touchmove', e => {
-            if(!touchStartX || !touchStartY) return;
+            if (!touchStartX || !touchStartY) return;
             const touchEndX = e.touches[0].clientX;
             const touchEndY = e.touches[0].clientY;
             const diffX = touchStartX - touchEndX;
             const diffY = touchStartY - touchEndY;
-            if(Math.abs(diffY) > Math.abs(diffX) && diffY > 50) {
-                if(mobileMenu.classList.contains('active')) {
+            if (Math.abs(diffY) > Math.abs(diffX) && diffY > 50) {
+                if (mobileMenu.classList.contains('active')) {
                     mobileMenu.classList.remove('active');
                     const icon = mobileMenuBtn.querySelector('i');
                     icon.classList.add('fa-bars');
@@ -1582,4 +1636,5 @@
         });
     </script>
 </body>
+
 </html>
