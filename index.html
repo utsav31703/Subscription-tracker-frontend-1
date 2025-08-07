@@ -1469,10 +1469,11 @@
 
                         if (btnId === 'ctaSignupBtn') {
                             window.location.href = 'auth.html';
-                        } else if (btnId.includes('login')) {
-                            window.location.href = 'index.html';
+                        }
+                        if (btnId.includes('login')) {
+                            window.location.href = 'auth.html';
                         } else {
-                            window.location.href = 'index.html';
+                            window.location.href = 'auth.html';
                         }
 
                     }, 1000);
